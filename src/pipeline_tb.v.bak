@@ -26,12 +26,12 @@ always @(posedge clk) begin
             $display("Cycle %0d: ", cycle_count);
             $display("  Instruction: 0x%h", dut.Fetch.IMEM.RD);
             $display("  R5: 0x%h, R6: 0x%h, R7: 0x%h, R4: 0x%h", 
-                dut.Decode.rf.Register[1],
-                dut.Decode.rf.Register[2],
-                dut.Decode.rf.Register[3],
+                dut.Decode.rf.Register[5],
+                dut.Decode.rf.Register[6],
+                dut.Decode.rf.Register[7],
                 dut.Decode.rf.Register[0]
             );
-            // $display("the imm is %h", dut.Decode.extension.Imm_Ext);
+            $display("the imm is %h", dut.Decode.extension.Imm_Ext);
         end
     end
 
